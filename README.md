@@ -82,3 +82,16 @@ if ($result  === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 ```
+##### Deleting a data entry in PHP
+```php
+$sql = "DELETE FROM steeple_besttimes.besttimes where id = $id";
+
+echo '<br>'.$sql.'<br>';
+$result = $conn->query($sql);
+
+if ($result  === TRUE) {
+    echo "Deleted record from besttimes";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+```
