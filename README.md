@@ -38,3 +38,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 ```
+##### Query database for existing records
+```php
+$sql = "SELECT id, distance, stroke, course, time, location, date FROM besttimes ORDER BY stroke asc, distance asc";
+        $result = $conn->query($sql);
+```
