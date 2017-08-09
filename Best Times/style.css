@@ -1,0 +1,23 @@
+/*
+    Macon Graves
+    Project: Best Times - Example Webpage
+*/
+
+body {
+    font-family: 'Avenir', 'Arial', sans-serif;
+}
+
+td {
+    color: aqua;
+    font-size: 18px;
+    padding: 5px;
+}
+
+#footer {
+    color: aqua;
+    background-color: lightseagreen;
+    opacity: 0.8;
+    font-size: 16px;
+    text-align: center;
+    padding: 25px;
+}
