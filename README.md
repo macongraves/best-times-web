@@ -43,3 +43,19 @@ if ($conn->connect_error) {
 $sql = "SELECT id, distance, stroke, course, time, location, date FROM besttimes ORDER BY stroke asc, distance asc";
 $result = $conn->query($sql);
 ```
+##### Looping through database to display records
+```php
+while($row = $result->fetch_assoc()) {
+    echo '<tr>';
+    echo '<td>'.$row['id'].'</td>';
+    echo '<td>'.$row['distance'].'</td>';
+    echo '<td>'.$row['stroke'].'</td>';
+    echo '<td>'.$row['course'].'</td>';
+    echo '<td>'.$row['time'].'</td>';
+    echo '<td>'.$row['location'].'</td>';
+    echo '<td>'.$row['date'].'</td>';
+    echo '<td><input value="Edit" name="edit" type="submit"></td>';
+    echo '<td><input value="Delete" name="delete'.$row['id'].'" type="submit"></td>';
+    echo '</tr>';
+}
+```
