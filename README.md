@@ -59,3 +59,25 @@ while($row = $result->fetch_assoc()) {
     echo '</tr>';
 }
 ```
+##### Inserting a new record
+```php
+$sql = "INSERT INTO steeple_besttimes.besttimes (id, distance, stroke, course, time, location, date) VALUES 
+        ("
+        ."'".$row["n"]."'".","
+        ."'".$_GET["distance"]."'".","
+        ."'".$_GET["stroke"]."'".","
+        ."'".$_GET["course"]."'".","
+        ."'".$_GET["time"]."'".","
+        ."'".$_GET["location"]."'".","
+        ."'".$_GET["date"]."'"
+        .")";
+
+echo '<br>'.$sql.'<br>';
+$result = $conn->query($sql);
+
+if ($result  === TRUE) {
+    echo "Added record to besttimes";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+```
