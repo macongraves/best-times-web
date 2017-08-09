@@ -1,6 +1,6 @@
 # Best Times - web development example
 This project is a webpage that allows users to add, edit, or remove recorded swimming times in a table/database format.
-##### Creating a static example table
+##### Creating a static example table in HTML
 ```html
 <table>
     <tr>
@@ -23,7 +23,7 @@ This project is a webpage that allows users to add, edit, or remove recorded swi
     </tr>
 </table>
 ```
-##### Creating a connection to server
+##### Creating a connection to server in PHP
 ```php
 $servername = "exampleservername";
 $username = "exampleusername";
@@ -32,7 +32,7 @@ $dbname = "exampledbname";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 ```
-##### Checking the connection
+##### Checking the server connection in PHP
 ```php
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
